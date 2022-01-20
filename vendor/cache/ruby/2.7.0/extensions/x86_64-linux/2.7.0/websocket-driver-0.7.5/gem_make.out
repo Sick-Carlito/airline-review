@@ -1,0 +1,15 @@
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/carlito94/.rbenv/versions/2.7.0/bin/ruby -I /home/carlito94/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20211225-51344-knsb9p.rb extconf.rb
+creating Makefile
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20211225-51344-1f82tt8

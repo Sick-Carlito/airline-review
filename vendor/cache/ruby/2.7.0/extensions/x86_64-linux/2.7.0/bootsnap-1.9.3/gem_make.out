@@ -1,0 +1,15 @@
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/bootsnap-1.9.3/ext/bootsnap
+/home/carlito94/.rbenv/versions/2.7.0/bin/ruby -I /home/carlito94/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20211225-51344-gviyfr.rb extconf.rb
+creating Makefile
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/carlito94/Desktop/react-rails-project/open-flights/vendor/cache/ruby/2.7.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20211225-51344-5ljtc/bootsnap
