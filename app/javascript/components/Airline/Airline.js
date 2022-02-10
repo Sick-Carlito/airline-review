@@ -40,26 +40,32 @@ const Airline = (props) => {
       .get(url)
       .then((resp) => {
         setAirline(resp.data);
-        console.log(resp.data);
-        // setReview(resp.data.included);
         setLoaded(true);
       })
       .catch((resp) => console.log(resp));
   }, []);
 
-  console.log('airline', airline)
+ 
 
-    // let reviews
-    // reviews = airline.included.map((review, index) => {
-    //   return (
-    //     <Review
-    //       key={index}
-    //       title={review.attributes.title}
-    //       description={review.attributes.description}
-    //       score={review.attributes.score}
-    //     />
-    //   );
-    // });
+  // {loaded && (   
+
+  //   console.log('airline-included', airline.included.length)
+    
+  //   )}
+
+    let reviews;
+    if (loaded && airline.included.length > 0) {
+      reviews = airline.included.map((review, index) => {
+        return (
+          <Review
+            key={index}
+            title={review.attributes.title}
+            description={review.attributes.description}
+            score={review.attributes.score}
+          />
+        );
+      });
+    }
   
 
   return (
@@ -71,7 +77,7 @@ const Airline = (props) => {
           </Header1>
         )}
 
-        <div className="reviews">[reviews will go here]</div>
+        <div className="reviews">{reviews}</div>
       </Column>
 
       <Column>[new review form will go here]</Column>
