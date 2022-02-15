@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import styled from "styled-components";
+import Rating from '../Rating/Rating'
 
 const Airline = (props) => {
-  const { name, image_url, slug } = props.attributes;
+  const { name, image_url, slug, avg_score } = props.attributes;
 
   // console.log(props.attributes)
 
@@ -49,6 +50,8 @@ const Airline = (props) => {
       </AirlineLogo>
 
       <AirlineName> {name} </AirlineName>
+
+      <Rating score={avg_score} />
 
       <LinkWrapper>
         <Link to={"/" + slug}> View Airline </Link>{" "}
