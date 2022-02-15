@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./Header";
 import Review from "./Review";
 import styled from "styled-components";
+import ReviewForm from './ReviewForm'
 
 const Column = styled.div`
   background: #fff;
@@ -28,9 +29,8 @@ const Airline = (props) => {
   //  console.log(slug)
 
   const [airline, setAirline] = useState({});
-  const [review, setReview] = useState({})
+  const [review, setReview] = useState({});
   const [loaded, setLoaded] = useState(false);
-  
 
   useEffect(() => {
     const slug = props.match.params.slug;
@@ -45,28 +45,25 @@ const Airline = (props) => {
       .catch((resp) => console.log(resp));
   }, []);
 
- 
-
-  // {loaded && (   
+  // {loaded && (
 
   //   console.log('airline-included', airline.included.length)
-    
+
   //   )}
 
-    let reviews;
-    if (loaded && airline.included.length > 0) {
-      reviews = airline.included.map((review, index) => {
-        return (
-          <Review
-            key={index}
-            title={review.attributes.title}
-            description={review.attributes.description}
-            score={review.attributes.score}
-          />
-        );
-      });
-    }
-  
+  let reviews;
+  if (loaded && airline.included.length > 0) {
+    reviews = airline.included.map((review, index) => {
+      return (
+        <Review
+          key={index}
+          title={review.attributes.title}
+          description={review.attributes.description}
+          score={review.attributes.score}
+        />
+      );
+    });
+  }
 
   return (
     <div>
@@ -80,7 +77,15 @@ const Airline = (props) => {
         <div className="reviews">{reviews}</div>
       </Column>
 
-      <Column>[new review form will go here]</Column>
+      <Column>
+        <ReviewForm
+          name={name}
+          review={review}
+          handleChange={props.handleChange}
+          handleSubmit={props.handleSubmit}
+          setRating={props.setRating}
+        />
+      </Column>
     </div>
   );
 };
